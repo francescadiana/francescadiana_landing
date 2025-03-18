@@ -1,0 +1,862 @@
+html, body {
+    overflow-x: hidden;
+}
+
+/* Impostazioni generali */
+body {
+    font-family: 'Figtree, Sans Serif';
+    background-color: #202124;
+    color: #EEEEEE; /* Cambiato da #FFFFFF a #EEEEEE */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Margini laterali per mobile */
+@media (max-width: 767px) {
+    #section1 #section3 {
+        max-width: calc(100% - 30px); /* 20px per lato */
+        margin: 0 auto;
+    }
+    .about-text{
+        margin-left: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Menu di navigazione flottante */
+nav {
+    text-align: center;
+    padding: 10px;
+    background-color: #3C4042;
+    position: fixed;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%); /* Centra il menu orizzontalmente */
+    border-radius: 24px; /* Arrotondamento agli angoli per l'effetto flottante */
+    z-index: 1000;
+}
+
+/* Spaziatura del menu per desktop */
+@media (min-width: 768px) {
+    nav {
+        top: 60px; /* Distanza dal top per desktop */
+    }
+}
+
+/* Spaziatura del menu per tablet */
+@media (max-width: 1024px) and (min-width: 768px) {
+    nav {
+        top: 60px; /* Distanza dal top per tablet */
+    }
+}
+
+/* Spaziatura del menu per mobile */
+@media (max-width: 767px) {
+    nav {
+        bottom: 40px; /* Distanza dal bottom per mobile */
+        top: auto;
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 16px; /* Distanza di 32px tra le voci (16px da entrambi i lati) */
+}
+
+nav ul li a {
+    color: #EEEEEE; /* Cambiato da #FFFFFF a #EEEEEE */
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase; /* Forza le lettere maiuscole */
+}
+
+nav ul li a.portfolio-link.active {
+    color: #FF9837;
+}
+
+/* Colori specifici per ciascuna voce attiva */
+nav ul li a.about-link.active {
+    color: #EA80FC;
+}
+
+
+
+nav ul li a.contacts-link.active {
+    color: #2D88FF;
+}
+
+/* Effetti hover */
+nav ul li a:hover {
+    color: #ccc;
+}
+
+
+/* Sezioni */
+section {
+    padding: 100px 0; /* Rimuovi il padding laterale */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Colori alternati delle sezioni */
+#section1,
+#section2,
+#section3 {
+    width: 100%; /* Lo sfondo della sezione occupa tutta la larghezza */
+   
+}
+
+/* Colori specifici delle sezioni */
+#section1 {
+    background-color: #202124; /* Colore scuro */
+}
+
+#section2 {
+    background-color: #202124; 
+}
+
+#section3 {
+    background-color: #202124; /* Colore scuro */
+}
+
+/* Titoli e sottotitoli */
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Figtree, Sans Serif';
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #aaa; /* Rimane invariato */
+}
+
+
+
+/* Sezione About */
+#section1 .about-content {
+    display: flex;
+    align-items: flex-start; /* Allinea tutti gli elementi in alto */
+    gap: 100px; /* Distanza di 100px tra il logo e il testo */
+    justify-content: center; /* Centra orizzontalmente il blocco logo + testo */
+    text-align: left; /* Mantiene il testo allineato a sinistra */
+    margin-top: 180px; /* Margine superiore per distanziare il contenuto */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#section1 .about-logo img {
+    max-width: 450px;
+    min-width: 150px; /* Regola la dimensione massima del logo */
+}
+
+#section1 .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Allinea tutto a sinistra */
+}
+
+/* Testo "My name is Francesca" */
+#section1 .about-text .intro {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: #EA80FC; /* Colore della sezione About quando selezionato */
+    margin-bottom: 8px;
+}
+
+/* Titolo principale "I'M A PRODUCT DESIGNER" */
+#section1 .about-text h1 {
+    font-family: 'Anton', sans-serif;
+    text-align: left;
+    flex-wrap: wrap; /* Permette di andare a capo */
+    font-size: 48px;
+    color: #EEEEEE;
+    margin: 0;
+}
+
+/* Testo "But my inclinations are" */
+#section1 .about-text .sub-intro {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: #EA80FC; /* Colore della sezione About */
+    margin-top: 38px; /* Distanza di 52px sopra */
+}
+
+/* Contenitore dei rettangolini */
+#section1 .skills {
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare a capo */
+    gap: 16px; /* Spaziatura tra i rettangolini */
+}
+
+/* Stile dei rettangolini */
+#section1 .skill-box {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    color: #EEEEEE;
+    padding: 6px 12px; /* Padding interno */
+    border: 3px solid #EEEEEE; /* Outline */
+    border-radius: 5px; /* Bordo leggermente arrotondato */
+    white-space: nowrap; /* Impedisce la rottura del testo */
+}
+
+#section1 .long-box {
+    margin-top: 16px;
+}
+
+#section1 .divider{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    max-width: 20px;
+}
+
+/* Sub sezione 2 di About= JOB*/
+#section1 .job {
+    display: flex;
+    align-items: flex-start; /* Allinea tutti gli elementi in alto */
+    gap: 191px; /* Distanza di 100px tra il logo e il testo */
+    justify-content: center; /* Centra orizzontalmente il blocco logo + testo */
+    text-align: left; /* Mantiene il testo allineato a sinistra */
+    flex-wrap: wrap; /* Permette di andare a capo */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+/* Text job */
+#section1 .about2-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Allinea tutto a sinistra */
+    margin-bottom: 20px; /* Riduzione dello spazio sotto il testo job */
+}
+
+/* Img mobile job */
+#section1 .about-mobile img {
+    max-width: 450px;
+    min-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Testo "I currently work at" */
+#section1 .about2-text .job {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: #EA80FC; /* Colore della sezione About quando selezionato */
+    margin-bottom: 24px;
+    margin-left: 0px;
+}
+
+/* Titolo principale "DOCEBO SPA & MOBILE PRODUCT" */
+#section1 .about2-text h1 {
+    font-family: 'Anton', sans-serif;
+    text-align: left;
+    flex-wrap: wrap; /* Permette di andare a capo */
+    font-size: 48px;
+    color: #EEEEEE;
+    margin-top: -20px;
+}
+
+/* Testo "Owning the design..." */
+#section1 .about2-text .sub-job {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: hsl(291, 95%, 75%); /* Colore della sezione About */
+    margin-top: 52px; /* Distanza di 52px sopra */
+}
+
+#section1 .about2-text .sub-job2{
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: hsl(291, 95%, 75%); /* Colore della sezione About */
+    margin-top: -10px;
+}
+
+
+
+.provenienza{
+    flex-wrap: wrap; 
+    padding: 100px 0; /* Rimuovi il padding laterale */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.about3-text .city-text{
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: hsl(291, 95%, 75%); /* Colore della sezione About */
+    flex-wrap: wrap; 
+}
+
+.about3-text h1{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    flex-wrap: wrap; /* Permette di andare a capo */
+    font-size: 48px;
+    color: #EEEEEE;
+    margin-top: -20px;
+}
+
+.cv-btn {
+    display: inline;
+    flex-wrap: wrap; /* Permette di andare a capo */
+
+    background-color: #EA80FC;
+    color: #202124;
+    padding: 12px 48px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 1000;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 50px;
+    justify-content: center;
+
+}
+
+.cv-btn :hover{
+    opacity: 0.5;
+}
+
+
+
+
+.about3-content{
+    display: flex;
+    align-items: flex-start; /* Allinea tutti gli elementi in alto */
+    gap: 16px; /* Distanza di 100px tra il logo e il testo */
+    justify-content: center; /* Centra orizzontalmente il blocco logo + testo */
+    text-align: left; /* Mantiene il testo allineato a sinistra */
+    margin-top: 50px; /* Margine superiore per distanziare il contenuto */
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-wrap: wrap; 
+}
+
+.map iframe{
+    width: 320px;
+    height: 420px;
+    flex-wrap: wrap;
+    justify-content: center; /* Allinea tutto a sinistra */
+    }
+
+    .images {
+        display: flex;
+        gap: 16px; /* Spazio tra l'immagine verticale e le orizzontali */
+        justify-content: center; /* Allinea tutto a sinistra */
+        flex-wrap: wrap; 
+    }
+    
+    
+    .naples-image-vertical img {
+        max-width: 316px; /* Puoi regolare questa larghezza per adattarla */
+        height: 420px; /* Assicura che l'immagine verticale abbia la stessa altezza della mappa */
+        object-fit: cover; /* Assicura che l'immagine si adatti senza deformarsi */
+    }
+
+    /* Contenitore per le immagini orizzontali */
+.naples-images-horizontal {
+    display: flex;
+    flex-direction: column; /* Disposizione verticale delle immagini */
+    gap: 10px; /* Spaziatura tra le due immagini */
+}
+
+/* Immagini orizzontali */
+.naples-images-horizontal img {
+    width: 316px; /* La stessa larghezza dell'immagine verticale */
+    height: 200px; /* Altezza uguale per mantenere proporzioni */
+    object-fit: cover; /* Adatta le immagini senza distorcerle */
+}
+
+.hobbies{
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: hsl(291, 95%, 75%); /* Colore della sezione About */
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra orizzontalmente il blocco logo + testo */
+    text-align: center; /* Mantiene il testo allineato a sinistra */
+    flex-wrap: wrap; 
+}
+
+/* Adattamenti per dispositivi mobili */
+@media (max-width: 1024px) {
+    #section1 .about-content {
+        flex-direction: column;
+        align-items: center; /* Permette di andare a capo */
+        gap: 60px; /* Riduci la distanza tra logo e testo in mobile */
+        margin-top: 60px;
+        margin-left: 16px;
+        margin-right: 16px;
+    } 
+
+/* Titolo principale "I'M A PRODUCT DESIGNER" */
+#section1 .about-text h1 {
+    flex-wrap: wrap; /* Permette di andare a capo */
+}
+
+#section1 .skills {
+        gap: 12px; /* Riduci lo spazio tra i rettangolini */
+    }
+
+    #section1 .skill-box {
+        font-size: 18px; /* Riduci leggermente la dimensione del testo nei rettangoli */
+        padding: 8px 16px; /* Riduci il padding nei rettangoli */
+    }
+
+    #section1 .job {
+        flex-wrap: wrap; /* Permette di andare a capo */
+    }
+
+#section1 .about-logo img {
+        max-width: 50%; /* Riduce le immagini al 50% */
+        display: block;
+        margin-left: auto;
+        margin-right: auto; /* Centra l'immagine */
+    }
+
+    #section1 .about-mobile img {
+        max-width: 60%; /* Riduce le immagini al 50% */
+        display: block;
+        margin-left: auto;
+        margin-right: auto; /* Centra l'immagine */
+        margin-top: -100px;
+    }
+
+    .map iframe{
+        width: 648px;
+        height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centra orizzontalmente il blocco logo + testo */
+        text-align: center; /* Mantiene il testo allineato a sinistra */
+    
+    }
+}
+
+@media (max-width: 768px) {
+
+     /* Sezione About */
+     #section1 .about-content {
+        flex-direction: column;
+        align-items: center; /* Centra tutto il contenuto */
+        gap: 40px; /* Riduce la distanza tra logo e testo */
+        margin-top: 40px;
+        margin-left: 16px;
+        margin-right: 16px;
+    } 
+
+     /* Logo SVG centrato e ridotto al 50% */
+     #section1 .about-logo img {
+        max-width: 50%; /* Riduce le immagini al 50% */
+        display: block;
+        margin-left: auto;
+        margin-right: auto; /* Centra l'immagine */
+    }
+
+    /* Testo */
+    #section1 .about-text {
+        text-align: center; /* Centra il testo per mobile */
+    }
+
+    /* Rettangolini con testo ridotti */
+ #section1 .skills {
+    gap: 12px; /* Riduce lo spazio tra i rettangolini */
+}
+
+#section1 .skill-box {
+    font-size: 18px; /* Riduce leggermente la dimensione del testo */
+    padding: 4px 8px; /* Riduce il padding nei rettangoli */
+}
+
+.cv-btn {
+    width: 300px;
+    text-align: center;
+}
+
+/* Stile dei titoli per mobile */
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 20px;
+}
+
+
+/* Sezione job (sotto il logo) centrata e ridotta */
+#section1 .job {
+      flex-direction: column;
+        align-items: center; /* Centra tutto il contenuto */
+        gap: 60px; /* Riduce la distanza tra logo e testo */
+        margin-top: 40px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+/* Riduzione immagini nella job section */
+#section1 .about-mobile img {
+    max-width: 50%; /* Stesso comportamento dell'immagine del logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centra l'immagine */
+    margin-top: 0px;
+}
+
+    #section1 .about-content {
+        margin-top: 20px; /* Margine superiore per distanziare il contenuto */
+}
+
+/* Testo della job section centrato */
+#section1 .about2-text {
+    text-align: left;
+    margin-bottom: 10px; /* Riduci lo spazio sotto il testo */
+}
+
+
+
+.download-btn:hover {
+    background-color: #FF7518; /* Colore di sfondo del pulsante al passaggio del mouse */
+}
+
+
+.provenienza{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.hobbies{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra orizzontalmente il blocco logo + testo */
+    text-align: center; /* Mantiene il testo allineato a sinistra */
+}
+
+.map iframe{
+    height: 320px;
+    width: 316px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Centra orizzontalmente il blocco logo + testo */
+    text-align: center; /* Mantiene il testo allineato a sinistra */
+}
+
+.contacts-image{
+    max-width: 80%; 
+}
+
+#email-form-container {
+        max-width: 50%;
+    }
+
+    form {
+       
+        max-width: 100%;
+        
+    }
+}
+ 
+
+
+
+
+
+
+/*---------------------------------------PORTFOLIO----------------------------------------------*/
+
+
+
+
+#section2{
+    background-color: #3C4042 ;
+}
+
+
+.portfolio-subtitle{
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: #FF9837; /* Colore della sezione About */
+}
+
+.portfolio-title h1{
+    margin-top: -20px;
+}
+
+.portfolio-list{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 220px;
+    margin-left: 220px;
+    justify-content: center; /* Allinea tutto a sinistra */
+    flex-wrap: wrap; 
+    gap: 24px; /* Spazio tra l'immagine verticale e le orizzontali */
+}
+
+
+.chart-image{
+    width: 360px;  /* Larghezza specifica */
+    height: 260px; /* Altezza specifica */
+    justify-content: center; /* Allinea tutto a sinistra */
+}
+
+
+.dribbble-container {
+    display: flex;
+    gap: 20px; /* Spazio tra le immagini, puoi modificare il valore */
+    justify-content: center; /* Allinea le immagini al centro */
+    align-items: center; /* Allinea verticalmente al centro se necessario */
+    flex-wrap: wrap; 
+}
+
+.dribbble {
+    position: relative;
+}
+
+.dribbble img {
+    width: 360px;  /* Larghezza specifica */
+    height: 260px; /* Altezza specifica */
+    display: block;
+    border-radius: 8px; /* Applica il border-radius */
+}
+
+.view-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 22px; /* Optional: applica il border-radius anche al bottone */
+}
+
+.dribbble:hover .view-btn {
+    opacity: 1;
+}
+
+
+.social-icons{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    justify-content: center; /* Allinea tutto a sinistra */
+    flex-wrap: wrap; 
+    gap: 24px; /* Spazio tra l'immagine verticale e le orizzontali */
+}
+
+.clickable-icon{
+    
+        cursor: pointer; /* Aggiunge il puntatore per indicare che è cliccabile */
+        transition: opacity 0.3s ease; /* Transizione fluida dell'opacità */
+}
+
+.clickable-icon:hover{
+    opacity: 0.6;
+}
+
+
+
+/* Adattamenti per dispositivi mobili */
+@media (max-width: 1200px) {
+    .portfolio-list {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .contacts-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+}
+
+
+
+
+
+/*---------------------------------------CONTACTS----------------------------------------------*/
+
+
+
+
+
+
+.contacts-text{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.contacts-subtitle{
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: #2D88FF; /* Colore della sezione About */
+}
+
+.e-mail{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 8px;
+}
+
+#text-to-copy{
+    color: #2D88FF;
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+}
+
+#copy-icon {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  #copy-icon:hover {
+    opacity: 0.7;
+  }
+  
+  #copy-confirmation {
+    display: none;
+    position: absolute; /* Posizionamento flottante */
+    top: -15px; /* Alza il messaggio sopra l'icona */
+    left: 95%; /* Allinea al centro orizzontale */
+    transform: translateX(-50%); /* Centra esattamente sopra l'icona */
+    background-color: #333; /* Colore di sfondo */
+    color: #2D88FF; /* Colore del testo */
+    padding: 5px 10px; /* Spazio attorno al testo */
+    border-radius: 5px; /* Arrotonda i bordi */
+    font-size: 14px;
+    white-space: nowrap; /* Evita che il testo vada a capo */
+    z-index: 10; /* Per far sì che il messaggio sia sopra altri elementi */
+    opacity: 0; /* Invisibile all'inizio */
+    transition: opacity 0.3s ease;
+  }
+  
+  #copy-confirmation.show {
+    display: block;
+    opacity: 1; /* Rende il messaggio visibile */
+  }
+  
+.contacts-text h1{
+    margin-top: -20px;
+    flex-wrap: wrap; 
+    text-align: left;
+}
+
+.contacts-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacts-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    margin-top: -200px;
+    }
+
+.contacts-image{
+    margin-top: 40px;
+}
+
+#section3 {
+    width: 100%; /* Assicurati che la larghezza occupi il 100% del contenitore */
+    padding: 20px; /* Aggiungi del padding per dare spazio interno */
+    margin: 0 auto; /* Centra la sezione (opzionale) */
+    box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza */
+  }
+
+
+/* FOOTER */
+footer {
+    background-color: #2D88FF; /* Colore di sfondo */
+    color: white;           /* Colore del testo */
+    text-align: center;     /* Allinea il testo al centro */
+    padding: 20px 0;       /* Padding superiore e inferiore */
+    position: relative;     /* Permette di posizionarlo correttamente */
+    bottom: 0;              /* Posiziona il footer in fondo alla pagina */
+    width: 100%;            /* Larghezza del footer */
+}
+
+.footer-content {
+    max-width: 1200px;     /* Massima larghezza del contenuto */
+    margin: 0 auto;        /* Centra il contenuto */
+}
+
+.social-links {
+    list-style: none;      /* Rimuove i punti elenco */
+    padding: 0;            /* Rimuove il padding */
+}
+
+.social-links li {
+    display: inline;        /* Mostra i link in linea */
+    margin: 0 10px;        /* Margine orizzontale tra i link */
+}
+
+.social-links a {
+    color: white;          /* Colore dei link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}
+
+
+
+
+
+/* Media query per gestire layout su dispositivi più piccoli */
+@media (max-width: 1024px) {
+    .contacts-left, .contacts-right {
+        max-width: 100%; /* Passa a colonna a larghezze ridotte */
+        flex: 100%;
+    }
+
+    .contacts-container {
+        flex-direction: column;
+    }
+
+    
+}
