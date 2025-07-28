@@ -78,6 +78,7 @@ nav ul li a {
     color: #EEEEEE; /* Cambiato da #FFFFFF a #EEEEEE */
     text-decoration: none;
     font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em; /* Aumenta leggermente la spaziatura */
     font-size: 18px;
     text-transform: uppercase; /* Forza le lettere maiuscole */
 }
@@ -138,6 +139,7 @@ section {
 /* Titoli e sottotitoli */
 h1 {
     font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em; /* Aumenta leggermente la spaziatura */
     font-size: 48px;
     margin-bottom: 10px;
 }
@@ -185,6 +187,7 @@ h2 {
 /* Titolo principale "I'M A PRODUCT DESIGNER" */
 #section1 .about-text h1 {
     font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em; /* Aumenta leggermente la spaziatura */
     text-align: left;
     flex-wrap: wrap; /* Permette di andare a capo */
     font-size: 48px;
@@ -210,6 +213,7 @@ h2 {
 /* Stile dei rettangolini */
 #section1 .skill-box {
     font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em; /* Aumenta leggermente la spaziatura */
     font-size: 20px;
     color: #EEEEEE;
     padding: 6px 12px; /* Padding interno */
@@ -270,6 +274,7 @@ h2 {
 /* Titolo principale "DOCEBO SPA & MOBILE PRODUCT" */
 #section1 .about2-text h1 {
     font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em; /* Aumenta leggermente la spaziatura */
     text-align: left;
     flex-wrap: wrap; /* Permette di andare a capo */
     font-size: 48px;
@@ -315,6 +320,7 @@ h2 {
 
 .about3-text h1{
     font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em; /* Aumenta leggermente la spaziatura */
     text-align: center;
     flex-wrap: wrap; /* Permette di andare a capo */
     font-size: 48px;
